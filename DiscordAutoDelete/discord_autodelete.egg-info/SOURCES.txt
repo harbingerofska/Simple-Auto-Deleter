@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+pyproject.toml
+discord_autodelete.egg-info/PKG-INFO
+discord_autodelete.egg-info/SOURCES.txt
+discord_autodelete.egg-info/dependency_links.txt
+discord_autodelete.egg-info/entry_points.txt
+discord_autodelete.egg-info/requires.txt
+discord_autodelete.egg-info/top_level.txt

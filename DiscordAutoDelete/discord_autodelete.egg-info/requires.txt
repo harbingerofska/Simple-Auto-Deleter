@@ -1,0 +1,10 @@
+discord.py>=2.1.0
+pytimeparse>=1.1.8
+aiosqlite>=0.17.0
+python-dotenv>=0.21.0
+
+[speed]
+aiohttp[speedups]>=3.7.4
+
+[speed:sys_platform == "linux"]
+uvloop<1,>=0.17.0

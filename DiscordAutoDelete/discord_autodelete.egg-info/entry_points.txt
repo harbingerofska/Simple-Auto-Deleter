@@ -1,0 +1,2 @@
+[console_scripts]
+discord-autodelete = discord_autodelete:main
