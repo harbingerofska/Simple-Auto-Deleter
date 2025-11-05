@@ -2,8 +2,8 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Copy all files from repository
-COPY . .
+# Copy from the DiscordAutoDelete subdirectory
+COPY DiscordAutoDelete/ .
 
 # Install dependencies using pyproject.toml
 RUN pip install --no-cache-dir -e .[speed]
