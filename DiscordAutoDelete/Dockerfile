@@ -9,12 +9,13 @@ COPY pyproject.toml .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
-COPY discord_autodelete discord_autodelete
+COPY discord_autodelete
 
 # Create directory for persistent database
 RUN mkdir -p /app/data
 
 # Run the bot
 CMD ["python", "-m", "discord_autodelete"]
+
 
 
