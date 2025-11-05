@@ -2,23 +2,14 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Copy project files
-COPY pyproject.toml .
+# Copy all files from repository
+COPY . .
 
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Install dependencies using pyproject.toml
+RUN pip install --no-cache-dir -e .[speed]
 
-# Copy application code
-COPY discord_autodelete discord_autodelete
-
-# Create directory for persistent database
+# Create data directory for SQLite database
 RUN mkdir -p /app/data
 
-# Run the bot
+# Start the bot
 CMD ["python", "-m", "discord_autodelete"]
-
-
-
-
-
-
