@@ -1,22 +1,16 @@
 FROM python:3.11-slim
 
 # Set working directory
-WORKDIR /DiscordAutoDelete
+WORKDIR /app
 
-# Copy project files
-ADD pyproject.toml .
-ADD autodeletebot.py .
+# Copy all project files
+COPY . .
+
 # Install dependencies
 RUN pip install --no-cache-dir -e .[speed]
 
 # Create directory for persistent database
-RUN mkdir -p /DiscordAutoDelete/data
+RUN mkdir -p /app/data
 
 # Run the bot
-
 CMD ["python", "-m", "discord_autodelete"]
-
-
-
-
-
