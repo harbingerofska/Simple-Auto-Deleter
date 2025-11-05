@@ -3,8 +3,7 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Copy project files
-COPY requirements.txt .
-COPY pyproject.toml .
+. .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
@@ -17,3 +16,4 @@ RUN mkdir -p /app/data
 
 # Run the bot
 CMD ["python", "-m", "discord_autodelete"]
+
