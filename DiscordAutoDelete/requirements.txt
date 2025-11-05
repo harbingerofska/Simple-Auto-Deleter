@@ -1,0 +1,10 @@
+# Based on your pyproject.toml dependencies
+discord.py>=2.1.0
+pytimeparse>=1.1.8
+aiosqlite>=0.17.0
+python-dotenv>=0.21.0
+
+# Optional speed improvements (recommended for production)
+aiohttp[speedups]>=3.7.4
+uvloop>=0.17.0; sys_platform == "linux"
+
