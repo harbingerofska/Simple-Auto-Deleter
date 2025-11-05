@@ -5,7 +5,7 @@ WORKDIR /DiscordAutoDelete
 
 # Copy project files
 ADD pyproject.toml .
-ADD discord_autodelete.py .
+ADD autodeletebot.py .
 # Install dependencies
 RUN pip install --no-cache-dir -e .[speed]
 
@@ -15,6 +15,7 @@ RUN mkdir -p /DiscordAutoDelete/data
 # Run the bot
 
 CMD ["python", "-m", "discord_autodelete"]
+
 
 
 
